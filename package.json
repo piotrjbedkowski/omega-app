@@ -1,0 +1,23 @@
+{
+  "name": "omega-app",
+  "version": "0.2.0",
+  "description": "Omega slide builder web application",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "NODE_ENV=production node server.js"
+  },
+  "engines": {
+    "node": ">=18.19"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "jszip": "^3.10.1",
+    "pptxgenjs": "^4.0.1"
+  },
+  "keywords": [
+    "slides",
+    "openai"
+  ]
+}

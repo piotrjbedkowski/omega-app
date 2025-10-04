@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Omega Slide Maker</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="card">
+      <section class="hero">
+        <h1>Design the slide deck you need, in under a minute</h1>
+        <p>
+          Describe the <em><strong>Google Slides deck you want</strong></em> &mdash; topics, tone, audience, and any data points. Our AI builder will craft an outline you can <em><strong>export in minutes</strong></em>.
+        </p>
+      </section>
+
+      <form id="brief-form" novalidate>
+        <div class="textarea-wrapper">
+          <label class="sr-only" for="brief">Slide deck description</label>
+          <textarea
+            id="brief"
+            name="brief"
+            placeholder="Example: Pitch deck for our new Omega analytics product. 10 slides. Audience: enterprise buyers. Emphasize ROI, integrations with Google Sheets, and roadmap."
+            required
+          >Example: Pitch deck for our new Omega analytics product. 10 slides. Audience: enterprise buyers. Emphasize ROI, integrations with Google Sheets, and roadmap.</textarea>
+        </div>
+
+        <div class="controls">
+          <div class="inline-actions">
+            <p class="helper">Be as descriptive as you like. The AI uses every detail to tailor the deck.</p>
+          </div>
+          <div class="controls__actions">
+            <button type="submit">Create my deck</button>
+            <p class="disclaimer">No credit card required.</p>
+          </div>
+        </div>
+      </form>
+
+      <section class="output output--hidden" aria-live="polite">
+        <div class="output__header">
+          <h2>AI-generated deck preview</h2>
+          <small id="output-status" class="helper"></small>
+        </div>
+        <div id="generation-success" class="success-banner success-banner--hidden" role="status" aria-live="polite">
+          <span class="success-banner__icon" aria-hidden="true">🎉</span>
+          <span class="success-banner__text">Congrats! Your deck outline is ready.</span>
+        </div>
+        <div id="deck-preview" class="deck-preview" role="region" aria-live="polite">
+          <div id="preview-message" class="empty-state">
+            <p class="empty-state__text">Ready when you are. Describe the deck above and hit Create.</p>
+            <div class="empty-state__progress" hidden aria-hidden="true">
+              <div class="empty-state__progress-bar"></div>
+            </div>
+          </div>
+          <div id="deck-actions" class="deck-actions" hidden>
+            <button id="download-deck" type="button" class="deck-actions__download">
+              Download slide deck (.pptx)
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>
